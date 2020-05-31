@@ -1,0 +1,505 @@
+//RTL ---------------------------------------------------------------------------------------------
+body.ui-rtl {
+  //Header
+  .header {
+    .header-top {
+      .login {
+        &_icon img {
+          margin-left: 0.6em;
+          margin-right: 0;
+        }
+      }
+      .logo-slogan {
+        .logo {
+          margin-left: 0.8em;
+          margin-right: 0;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .logo-slogan {
+          .logo {
+            margin-left: 0.5em;
+            margin-right: 0;
+          }
+        }
+        .login {
+          &_icon img {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      //Toggle-Menu-But
+      .nav-toggle {
+        left: auto;
+        right: 0;
+        padding-right: 0;
+        padding-left: 30px;
+        &.active {
+          left: auto;
+          right: 70%;
+        }
+      }
+      //Back-But
+      .back-toggle {
+        right: auto;
+        left: 0;
+        padding-right: 0;
+        padding-left: 30px;
+        span {
+          &:before {
+            transform: rotate(-45deg);
+            left: -1px;
+            right: auto;
+          }
+          &:after {
+            transform: rotate(45deg);
+            left: -1px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  //Menu
+  .main-menu {
+    ul {
+      li {
+        margin-left: 1em;
+        margin-right: 0;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      right: -100%;
+      left: auto;
+      margin-left: 0;
+      box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.15);
+      ul {
+        li {
+          margin-right: 0;
+          margin-left: 0;
+          &.is-active {
+            &:before {
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+      }
+      &.active {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  //Tabs
+  .ui-tabview.ui-tabview-top {
+    .ui-tabview-nav {
+      li {
+        &:after {
+          right: -1px;
+          left: auto;
+        }
+        &:first-child {
+          border-radius: 0 $tabsNavBorderRadius $tabsNavBorderRadius 0;
+        }
+        &:last-child {
+          border-radius: $tabsNavBorderRadius 0 0 $tabsNavBorderRadius;
+        }
+        a {
+          &:before {
+            margin-left: 0.5em;
+            margin-right: 0;
+          }
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        li {
+          border-radius: $tabsNavBorderRadius;
+          &:first-child,
+          &:last-child {
+            border-radius: $tabsNavBorderRadius;
+          }
+          a {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  //Accordion
+  .ui-accordion {
+    .ui-accordion-header {
+      a {
+        padding-left: 2.5em;
+        padding-right: 0.5em;
+        &:before {
+          margin-left: 0.5em;
+          margin-right: 0;
+        }
+        .pi-chevron-right:before {
+          display: block;
+          transform: scaleX(-1);
+        }
+      }
+      .ui-accordion-toggle-icon {
+        left: 0.5em;
+        right: auto;
+      }
+    }
+  }
+
+  //Buttons
+  .ui-button {
+    margin-right: 0.8em;
+    margin-left: 0;
+    //File Upload
+    &.ui-fileupload-choose {
+      .ui-button-icon-left {
+        left: auto;
+        right: 1em;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &.ui-button-text-icon-left .ui-button-text {
+      padding: $buttonWithRightIconPadding;
+    }
+    &.ui-state-default.ui-button-success {
+      .ui-button-text {
+        text-align: right;
+      }
+      &.ui-button-text-icon-left {
+        .ui-button-icon-left.pi {
+          left: auto;
+          right: 0.2em;
+        }
+      }
+      &.ui-button-text-only {
+        .ui-button-text {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .top-buttons {
+    .ui-button {
+      .ui-button-icon-left {
+        right: 0.8em;
+        left: auto;
+      }
+      @media only screen and (max-width: 440px) {
+        &:before {
+          right: -0.6em;
+          left: auto;
+        }
+        &.ui-state-default.ui-button-secondary {
+          .ui-button-icon-left {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+  .bottom-zone {
+    .ui-button {
+      @media only screen and (max-width: 440px) {
+        margin-right: 2%;
+        margin-left: auto;
+        &:first-child {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  //CheckBox Buttons
+  .ui-chkbox-label {
+    margin-left: 0;
+    margin-right: 0.5em;
+  }
+  .ui-chkbox {
+    & + .ui-chkbox-label {
+      margin-right: 0.8em;
+      margin-left: 0;
+    }
+    .pi-check:before {
+      margin-right: -0.3em;
+    }
+  }
+
+  //Radio Buttons
+  .ui-radiobutton {
+    & + .ui-radiobutton-label {
+      margin-right: 0.8em;
+      margin-left: 0;
+    }
+  }
+
+  //Dropdown
+  .ui-dropdown {
+    .ui-dropdown-label {
+      padding-left: 2.4em;
+      padding-right: 1em;
+    }
+    .ui-dropdown-trigger {
+      left: 5px;
+      right: auto;
+    }
+    .ui-dropdown-panel {
+      .ui-dropdown-item {
+        text-align: right;
+      }
+      .ui-dropdown-filter-container {
+        .ui-dropdown-filter {
+          padding-left: 2em;
+          padding-right: 1em;
+        }
+        .ui-dropdown-filter-icon {
+          left: 1.357em;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  //Calendar
+  .ui-calendar {
+    &.ui-calendar-w-btn {
+      .ui-datepicker-trigger.ui-button {
+        right: auto;
+        left: 0.2em;
+      }
+      .ui-inputtext {
+        padding-left: 2em;
+        padding-right: 1em;
+      }
+    }
+  }
+
+  //Table Start
+  .ui-table {
+    .ui-table-thead > tr > th {
+      text-align: right;
+      &.center {
+        text-align: center;
+      }
+    }
+    .ui-table-thead > tr {
+      &:first-child > th {
+        &:first-child {
+          border-radius: 0 $secondborderRadius 0 0;
+        }
+        &:last-child {
+          border-radius: $secondborderRadius 0 0 0;
+        }
+      }
+      &:last-child > th {
+        &:first-child {
+          border-radius: 0 0 $secondborderRadius 0;
+        }
+        &:last-child {
+          border-radius: 0 0 0 $secondborderRadius;
+        }
+      }
+      &:only-child > th {
+        &:first-child {
+          border-radius: 0 $secondborderRadius $secondborderRadius 0;
+        }
+        &:last-child {
+          border-radius: $secondborderRadius 0 0 $secondborderRadius;
+        }
+      }
+    }
+    .ui-table-tbody > tr:last-child > td {
+      &:first-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: $secondborderRadius;
+      }
+      &:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: $secondborderRadius;
+      }
+    }
+    .ui-table-tfoot > tr > td {
+      &:first-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: $secondborderRadius;
+      }
+      &:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: $secondborderRadius;
+      }
+      &:only-child {
+        border-bottom-right-radius: $secondborderRadius;
+        border-bottom-left-radius: $secondborderRadius;
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .ui-table-tbody > tr {
+        &:first-child {
+          td:first-child {
+            border-top-left-radius: $secondborderRadius;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 40em) {
+      &.ui-table-responsive {
+        .ui-table-tbody > tr > td {
+          &.small-width {
+            &.center {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      .ui-table-thead > tr > th,
+      .ui-table-tbody > tr > td {
+        &:first-child {
+          padding-left: 1.5em;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .ui-table-tbody > tr:not(.open-data) > td {
+        .ui-column-title {
+          padding-left: 0;
+        }
+      }
+    }
+    .status-bullet {
+      margin-right: 0;
+      margin-left: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 40em) {
+    .ui-table-responsive .ui-table-tbody > tr > td {
+      text-align: right;
+      float: right;
+      clear: right;
+    }
+  }
+  //Table End
+
+  ////Decision
+  .status-view {
+    &_file {
+      margin-right: 1em;
+      margin-left: 0;
+      &:before {
+        margin-left: 1em;
+        margin-right: 0;
+      }
+      i.pi {
+        margin-left: 0.4em;
+        margin-right: 0;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      &_file {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  //Messages
+  .ui-toast-top-right {
+    left: 20px;
+    right: auto;
+  }
+  .ui-toast {
+    .ui-toast-message {
+      &-text-content {
+        margin-right: 2.5em;
+        margin-left: 0;
+      }
+      &.ui-toast-message-success,
+      &.ui-toast-message-info,
+      &.ui-toast-message-warn,
+      &.ui-toast-message-error {
+        .ui-toast-close-icon {
+          left: 0.25em;
+          right: auto;
+        }
+        .ui-toast-icon {
+          right: 1em;
+          left: auto;
+        }
+      }
+    }
+  }
+  .ui-dialog-box {
+    .ui-dialog-buttons {
+      & > div {
+        text-align: right;
+      }
+      & > div:last-child {
+        text-align: left;
+      }
+      & > div:first-child:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  .ui-scrollpanel-content {
+    padding: 0 0 18px 18px;
+  }
+
+  //Filter Container
+  .filter-but {
+    left: 1.4em;
+    right: auto;
+  }
+  .filter-zone {
+    @media only screen and (max-width: 600px) {
+      padding-right: 1em;
+      padding-left: 0;
+    }
+    .filter-container {
+      @media only screen and (max-width: 600px) {
+        .p-link-filter {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  .ui-paginator {
+    direction: ltr;
+    text-align: right;
+  }
+
+  .ui-g-1,
+  .ui-g-2,
+  .ui-g-3,
+  .ui-g-4,
+  .ui-g-5,
+  .ui-g-6,
+  .ui-g-7,
+  .ui-g-8,
+  .ui-g-9,
+  .ui-g-10,
+  .ui-g-11,
+  .ui-g-12 {
+    float: right;
+  }
+}
