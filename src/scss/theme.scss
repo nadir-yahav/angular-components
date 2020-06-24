@@ -261,17 +261,17 @@ body .ui-widget {
   .p-dinamic-offset {
     flex-grow: 1000;
   }
+
   .p-marging-bottom {
     margin-bottom: 1.5em;
   }
+
   .p-border-bottom {
     border-bottom: 1px solid $borderColor;
   }
-
   /*p-checkbox {
     margin-right: 20px;
   }*/
-
   p-checkbox label {
     display: inline-block;
     padding-right: 10px;
@@ -288,27 +288,36 @@ h2 {
   font-weight: 500;
   line-height: 1.2;
 }
+
 h3 {
   font-size: 1.11em;
   margin-bottom: 0.4em;
   font-weight: 700;
 }
+
 h4 {
   font-size: 1em;
   color: #4a4a4a;
   margin-bottom: 0.4em;
   font-weight: bold;
 }
+
 ul {
   margin: 10px 0;
 }
+
 ul.hebrew {
   list-style: hebrew;
 }
+
 hr {
   border: 0;
   border-top: solid 1px #ccc;
   margin: 35px 0 10px;
+}
+hr.dashed {
+  border-top: 1px dashed #a1a7b3;
+  margin: 0 0 36px;
 }
 
 div:focus {
@@ -320,45 +329,72 @@ div:focus {
   color: #0b5a8c;
   cursor: pointer;
 }
+
 .left {
   float: left;
 }
-
+.mt10 {
+  margin-top: 10px;
+}
+.mt15 {
+  margin-top: 15px;
+}
 .mt20 {
   margin-top: 20px;
 }
+
 .ml10 {
   margin-left: 10px;
 }
+
 .ml20 {
   margin-left: 20px;
 }
+
+.mr0 {
+  margin-right: 0;
+}
+
 .mr20 {
   margin-right: 20px;
 }
+
 .mr35 {
+  margin-right: 35px;
+}
+.mr40 {
   margin-right: 35px;
 }
 .mb20 {
   margin-bottom: 20px;
 }
-
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
 .mb15 {
   margin-bottom: 15px;
 }
+
 .w100 {
   width: 100%;
   clear: both;
 }
+
 .red {
   color: red;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .sep {
   margin: 0 10px;
 }
+
 .pi.pi-question {
   position: relative;
   border: 1px solid;
@@ -369,6 +405,7 @@ div:focus {
   color: #0b5a8c;
   cursor: pointer;
 }
+
 .ui-tooltip-text.ui-shadow.ui-corner-all {
   background-color: white;
   color: #000;
@@ -394,6 +431,7 @@ div:focus {
   margin-top: 25px;
   font-weight: bold;
 }
+
 .title-zone.secondary > .title-zone_desk {
   margin: 6px 0 19px 0;
   line-height: 1.8;
@@ -405,9 +443,11 @@ div:focus {
   position: relative;
   top: 10px;
 }
+
 .top-zone.secondary h2 > span:nth-of-type(1) {
   color: #000000;
 }
+
 .circle.fill {
   background: #0b5a8c;
   color: #fff;
@@ -473,14 +513,17 @@ div:focus {
   right: -4px;
   position: relative;
 }
+
 .expand-content-btn.open::before {
   content: "\e902";
 }
+
 .expand-content-container {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s;
 }
+
 .expand-content-container.in {
   max-height: 1000px;
 }
@@ -790,6 +833,7 @@ div:focus {
 
 .content-zone {
   flex-grow: 1;
+
   &.decision-zone {
     max-width: 745px;
   }
@@ -805,7 +849,7 @@ div:focus {
 }
 
 label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
-  font-size: 0.95em;
+  // font-size: 0.95em;
   margin-bottom: 0.4em;
   font-weight: 700;
   display: inline-block;
@@ -819,6 +863,7 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
   margin-bottom: 1.5em;
   display: flex;
   justify-content: space-between;
+
   &.filter-zone {
     flex-wrap: wrap;
   }
@@ -836,6 +881,7 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
 
     &_title {
       font-size: 2em;
+
       sub {
         font-weight: 500;
         font-size: 0.5em;
@@ -863,22 +909,27 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
       display: flex;
     }
   }
+
   @media only screen and (max-width: 767px) {
     .title-zone {
       &_title {
         font-size: 1.33em;
+
         sub {
           font-size: 0.6em;
         }
+
         span {
           font-size: 0.8em;
         }
       }
+
       &_desk {
         font-size: 1em;
       }
     }
   }
+
   @media only screen and (max-width: 440px) {
     margin-bottom: 1em;
   }
@@ -891,16 +942,17 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
     width: 100%;
     min-width: inherit;
   }
-
   // ,label:not(.ui-chkbox-label):not(.ui-radiobutton-label)
   .ui-inputtext:not(.big-field) {
     // max-width: 420px;
     width: 100%;
   }
+
   .ui-inputtext.big-field {
     width: 100%;
   }
 }
+
 .filter-but {
   display: none;
   position: absolute;
@@ -908,23 +960,28 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
   margin-top: 0.5em !important;
   width: 2.7em;
   height: 2.35em;
+
   .ui-togglebutton,
   .ui-button {
     background-color: #ffffff;
     border-radius: 50%;
     border: 2px solid $primaryColor;
+
     &.ui-state-active {
       background-color: #ffffff;
     }
+
     &.ui-state-active .ui-button-icon-left,
     .ui-button-icon-left {
       color: $primaryColor;
     }
+
     &:not(.ui-state-disabled):not(.ui-state-active):hover .ui-button-icon-left,
     &.ui-state-active:hover .ui-button-icon-left {
       color: $primaryColor;
     }
   }
+
   .ui-button-text {
     border: 0;
     clip: rect(0 0 0 0);
@@ -935,8 +992,10 @@ label:not(.ui-chkbox-label):not(.ui-dropdown-label):not(.ui-radiobutton-label) {
     position: absolute;
     width: 1px;
   }
+
   @media only screen and (max-width: 600px) {
     display: block;
+
     &.ui-button .pi {
       font-size: 1.5em;
     }
@@ -951,6 +1010,7 @@ body .filter-zone {
     margin-right: -1em;
     margin-left: -1em;
     padding-left: 1em;
+
     &[hidden] {
       display: none;
     }
@@ -959,6 +1019,7 @@ body .filter-zone {
   .filter-container {
     padding-bottom: 0.4em;
     width: 100%;
+
     &:last-child {
       padding-bottom: 0.6em;
       border-bottom: 1px solid $borderColor;
@@ -976,6 +1037,7 @@ body .filter-zone {
       font-size: 17px;
       width: 12.58em;
     }
+
     .ui-dropdown {
       min-width: 11em;
     }
@@ -984,29 +1046,35 @@ body .filter-zone {
     .p-but-filter {
       display: flex;
     }
+
     @media only screen and (max-width: 960px) {
       .p-dinamic-offset {
         display: none;
       }
     }
+
     @media only screen and (max-width: 600px) {
       .ui-inputtext,
       .ui-dropdown {
         width: 100%;
         // max-width: 420px;
       }
+
       .p-col {
         flex-basis: 100%;
       }
+
       .p-link-filter {
         flex-direction: column;
         align-items: flex-start;
+
         .ui-button.ui-button-rounded {
           margin: 1.5em auto 0;
           width: 100%;
         }
       }
     }
+
     @media only screen and (max-width: 420px) {
     }
   }
@@ -1024,6 +1092,7 @@ body .ui-paginator {
   text-align: inherit;
   margin-top: 2em;
   margin-bottom: 1.5em;
+
   .ui-paginator-pages {
     .ui-paginator-page {
       margin: 0 0.2em;
@@ -1249,8 +1318,9 @@ body .ui-accordion {
         &:before {
           color: $errorColor !important;
           border-color: $errorColor !important;
-          background-color: $primaryTextColor !important ;
+          background-color: $primaryTextColor !important;
         }
+
         .ui-accordion-toggle-icon {
           color: $errorColor !important;
         }
@@ -1261,40 +1331,49 @@ body .ui-accordion {
   .ui-accordion-header {
     margin-top: $accordionSpacing;
     margin-bottom: 0;
+
     &.ui-state-disabled a {
       &:before {
         border-color: #999999;
         color: #999999;
       }
+
       .ui-accordion-toggle-icon {
         color: #999999;
       }
     }
+
     &:not(.ui-state-disabled).ui-state-active a {
       background-color: $accordionHeaderActiveBgColor;
       border-color: $accordionHeaderBorder;
       color: $accordionHeaderTextColor;
+
       &:before {
         background-color: $primaryDarkerColor;
         color: $primaryTextColor;
         border-color: $primaryDarkerColor;
       }
     }
+
     &:not(.ui-state-active):not(.ui-state-disabled):hover {
       background-color: $tabsNavHoverBgColor;
       border-color: $accordionHeaderBorder;
     }
+
     &:not(.ui-state-disabled).ui-state-active:hover a,
     &:not(.ui-state-active):not(.ui-state-disabled):hover a {
       background-color: $accordionHeaderActiveBgColor;
       color: $accordionHeaderTextColor;
+
       .ui-accordion-toggle-icon {
         color: $primaryDarkerColor;
       }
     }
+
     &:not(.ui-state-disabled).ui-state-active a .ui-accordion-toggle-icon {
       color: $primaryDarkerColor;
     }
+
     a {
       padding-right: 2.5em;
       border-radius: $accordionHeaderBorderRadius;
@@ -1304,11 +1383,13 @@ body .ui-accordion {
       font-size: $fontSizeSmall;
       background-color: $accordionHeaderBgColor;
       border-color: $accordionHeaderBorder;
+
       &:before {
         @at-root body.ui-rtl .ui-accordion .ui-accordion-header a:before {
           margin-right: initial;
           margin-left: 0.5em;
         }
+
         flex-shrink: 0;
         width: 20px;
         height: 20px;
@@ -1322,15 +1403,18 @@ body .ui-accordion {
         color: $secondaryColor;
         background-color: $primaryTextColor;
       }
+
       .ui-accordion-toggle-icon {
         color: $secondaryColor;
       }
     }
+
     .ui-accordion-toggle-icon {
       position: absolute;
       right: 0.5em;
     }
   }
+
   .ui-accordion-content {
     padding: $accordionContentPadding;
     border-radius: $accordionHeaderBorderRadius;
@@ -1343,9 +1427,11 @@ body .ui-accordion {
 //Group Fields
 .p-group {
   margin-bottom: 2em;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   legend {
     width: 100%;
     margin-bottom: 0.8em;
@@ -1353,6 +1439,7 @@ body .ui-accordion {
     font-size: 1.33em;
     font-weight: 700;
     border-bottom: 1px solid $borderColor;
+
     @media only screen and (max-width: 767px) {
       font-size: 1.125em;
     }
@@ -1370,32 +1457,38 @@ body .ui-inputtext {
     border-radius: $inputBorderRadius;
     text-overflow: ellipsis;
   }
+
   &.small-input {
     width: 50% !important;
     display: block;
   }
+
   @media only screen and (max-width: 1200px) {
     &.small-input {
       width: 100% !important;
     }
   }
+
   @media only screen and (max-width: 640px) {
     font-size: $fontSizeSmall;
   }
 }
+
 body .ui-float-label > label {
   color: $textColor;
   left: 1em;
   right: 1em;
 }
 
-input + div {
+input + div,
+.invalid-feedback {
   color: red;
   margin: 5px 10px 0 0;
 }
 //Dropdown
 body .ui-dropdown {
   min-width: 12em;
+
   .ui-dropdown-label {
     text-overflow: ellipsis;
     padding-right: 2.4em;
@@ -1462,24 +1555,29 @@ body .ui-chkbox {
   width: $checkboxWidth;
   height: $checkboxHeight;
   vertical-align: top;
+
   .ui-chkbox-box {
     width: $checkboxWidth;
     height: $checkboxHeight;
     border-radius: 4px;
+
     &.ui-state-active,
     &.ui-state-active.ui-state-focus {
       color: $primaryColor;
       background-color: $inputBgColor;
       border-color: $checkboxActiveBorderColor;
     }
+
     &.ui-state-active:not(.ui-state-disabled):hover {
       background-color: $inputBgColor;
       color: $primaryColor;
     }
+
     .ui-chkbox-icon {
-      font-size: 2.2em;
-      overflow: visible;
-      margin-top: -0.3em;
+      margin-top: 0.16em;
+      // font-size: 2.2em;
+      // overflow: visible;
+      // margin-top: -0.3em;
     }
   }
 
@@ -1488,6 +1586,7 @@ body .ui-chkbox {
     margin-left: 0.8em;
     display: inline-block;
     vertical-align: middle;
+
     @media only screen and (max-width: 640px) {
       max-width: 80%;
     }
@@ -1552,15 +1651,17 @@ body .ui-radiobutton {
 
   & + .ui-radiobutton-label {
     @at-root body.ui-rtl .ui-radiobutton + .ui-radiobutton-label {
-      margin-left: initial;
+      // margin-left: initial;
       margin-right: 0.8em;
     }
+
     display: inline-block;
     vertical-align: middle;
     margin-left: 0.8em;
     font-size: 1em;
     font-weight: 400;
     max-width: 90%;
+
     @media only screen and (max-width: 640px) {
       max-width: 80%;
     }
@@ -1596,6 +1697,7 @@ body .ui-radiobutton {
     }
   }
 }
+
 //Buttons
 body .ui-button {
   color: $buttonTextColor;
@@ -1608,8 +1710,10 @@ body .ui-button {
       border: 0 none;
       border-radius: 50%;
     }
+
     &.ui-button-icon-only {
       width: 1.5em;
+
       .ui-button-text {
         padding: 0;
       }
@@ -1627,16 +1731,20 @@ body .ui-button {
     width: auto;
     display: inline-block;
     margin-bottom: 0;
+
     .ui-button-icon-left {
       left: 1em;
     }
+
     .pi-plus {
       font-size: 2em;
+
       &:before {
         content: "\e944";
       }
     }
   }
+
   &:first-child {
     margin-left: 0;
   }
@@ -1662,21 +1770,25 @@ body .ui-button {
       background-color: $secondaryButtonHoverBgColor;
       border-color: $secondaryButtonHoverBorderColor;
     }
+
     &.ui-status-approve {
       color: $secondaryColor;
       border-color: $secondaryColor;
       margin-top: 0.5em;
     }
+
     &.ui-status-fix {
       color: $secondaryLightColor;
       border-color: $secondaryLightColor;
       margin-top: 0.5em;
     }
+
     &.ui-status-reject {
       color: $errorColor;
       border-color: $errorColor;
       margin-top: 0.5em;
     }
+
     &.ui-status-approve,
     &.ui-status-fix,
     &.ui-status-reject {
@@ -1812,6 +1924,11 @@ body .bottom-zone {
   margin-right: 0.8em;
 }
 
+.ui-rtl .title-zone + button {
+  margin-right: 0;
+  margin-top: 12px;
+}
+
 .ui-rtl .ui-button:first-child {
   margin-right: 0;
 }
@@ -1820,7 +1937,7 @@ body .bottom-zone {
 body .ui-table {
   background-color: $tableBgColor;
   border-radius: $secondborderRadius;
-  border: $tableBodyCellBorderLeftRight;
+  // border: $tableBodyCellBorderLeftRight;
 
   table {
     table-layout: auto;
@@ -1832,24 +1949,38 @@ body .ui-table {
     border: $tableHeaderCellBorder;
     background-color: $tableHeaderCellBgColor;
     color: $tableHeaderCellTextColor;
+
     @at-root body.ui-rtl .ui-table {
       .ui-table-thead > tr {
         > th {
           text-align: right;
         }
+
+        &:last-child > th:last-child {
+          border-radius: 15px 0 0 15px;
+        }
+
+        &:last-child > th:first-child {
+          border-radius: 0 15px 15px 0;
+        }
+
         &:only-child > th:last-child {
           border-radius: 15px 0 0 15px;
         }
+
         &:only-child > th:first-child {
           border-radius: 0 15px 15px 0;
         }
       }
+
       .ui-table-tbody > tr > td {
         vertical-align: middle;
+
         i {
           font-size: 3em;
           color: #808080;
         }
+
         i.icon-circle {
           border: solid 1px #000;
           border-radius: 50px;
@@ -1857,6 +1988,7 @@ body .ui-table {
           padding: 2px;
           cursor: pointer;
         }
+
         .cancel {
           top: -6px;
           position: relative;
@@ -1976,6 +2108,11 @@ body .ui-table {
     background-color: transparent;
     border: $tableBodyCellBorder;
     color: $primaryColor;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    border: solid 1px;
+    border-radius: 50px;
 
     &.delete {
       color: $errorColor;
@@ -2166,6 +2303,7 @@ body .ui-table {
   .ui-table-tbody > tr > td {
     padding: $tableBodyCellPaddingSmall;
   }
+
   .ui-paginator-bottom {
     position: absolute;
   }
@@ -2173,12 +2311,15 @@ body .ui-table {
   .ui-table-tbody > tr:not(.open-data) > td a {
     display: block;
     color: $primaryDarkColor;
+
     span {
       text-decoration: none;
+
       &.link {
         text-decoration: underline;
       }
     }
+
     &:hover {
       text-decoration: none;
     }
@@ -2196,6 +2337,7 @@ body .ui-table {
   @media screen and (max-width: 1280px) {
     border: 0 none;
     background-color: transparent;
+
     .ui-table-tbody > tr {
       position: relative;
       margin-bottom: 1.1em;
@@ -2203,10 +2345,12 @@ body .ui-table {
       padding-bottom: 0.5em;
       border-radius: $secondborderRadius;
       border: $tableBodyCellBorderBottom;
+
       &:last-child {
         border-bottom: $tableBodyCellBorderBottom;
       }
     }
+
     .ui-table-tbody > tr:not(.open-data) {
       padding-right: 0.5em;
       padding-left: 0.5em;
@@ -2229,14 +2373,17 @@ body .ui-table {
         line-height: 1.1;
       }
     }
+
     .ui-table-tbody > tr.open-data {
       margin-top: -1.8em;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+
       & > td {
         width: 100%;
       }
     }
+
     .ui-paginator-bottom {
       position: relative;
       margin-top: 0.5em;
@@ -2247,6 +2394,7 @@ body .ui-table {
   @media screen and (max-width: 959px) {
     // .ui-table-tbody > tr:not(.open-data) > td{ width: 25%;}
   }
+
   @media screen and (max-width: 800px) and (min-width: 40em) {
     .ui-table-tbody > tr:not(.open-data) > td {
       width: 33%;
@@ -2267,14 +2415,17 @@ body .ui-table {
     margin-right: 0.5em;
     display: inline-flex;
     background-color: $primaryLightenColor;
+
     &.status-pending,
     &.status-Pending {
       background-color: $primaryLightenColor;
     }
+
     &.status-approved,
     &.status-Approved {
       background-color: $secondaryColor;
     }
+
     &.status-denied,
     &.status-Denied {
       background-color: $errorColor;
@@ -2376,12 +2527,15 @@ body .ui-calendar {
   font-size: 1em;
   padding-bottom: 0.3em;
 }
+
 .statment-options {
   margin: 1em 2em;
   margin-right: 0;
 }
+
 .overlay-panel-but {
   position: relative;
+
   .ui-overlaypanel {
     top: 100% !important;
     left: auto !important;
@@ -2389,26 +2543,31 @@ body .ui-calendar {
     width: 400px;
     text-align: left;
     font-size: $fontSizeSmall;
+
     @media only screen and (max-width: 767px) {
       max-width: 280px;
       left: 0 !important;
       right: 0 !important;
       margin: 0 auto;
     }
+
     .title {
       font-weight: 700;
     }
   }
 }
+
 .statment-zone {
   .ui-overlaypanel {
     max-width: 400px;
     text-align: left;
     font-size: $fontSizeSmall;
+
     @media only screen and (max-width: 640px) {
       max-width: 100%;
       margin-right: 3%;
       margin-left: 3%;
+
       &:after,
       &:before {
         display: none;
@@ -2426,6 +2585,7 @@ body .ui-tooltip {
     padding-left: 1em;
     box-shadow: 0px 1px 3px #00000042;
   }
+
   .ui-tooltip-arrow {
     display: none;
   }
@@ -2442,16 +2602,19 @@ body .ui-scrollpanel {
     padding: 1.6em 2em;
     padding-right: 0;
   }
+
   .ui-scrollpanel-content {
     .scroll-panel {
       padding-right: 1em;
     }
   }
+
   .ui-scrollpanel-bar {
     background-color: #d2d2d2;
     opacity: 1;
     transition: background-color 0.3s;
   }
+
   .ui-scrollpanel-bar:hover {
     background-color: $primaryDarkerColor;
   }
@@ -2459,9 +2622,11 @@ body .ui-scrollpanel {
   @media only screen and (max-width: 1024px) {
     height: 100%;
     box-shadow: none;
+
     .ui-scrollpanel-wrapper {
       padding: 0;
     }
+
     .ui-scrollpanel-content {
       .scroll-panel {
         padding-right: 0;
@@ -2474,12 +2639,14 @@ body .ui-scrollpanel {
 .status-view {
   display: flex;
   flex-wrap: wrap;
+
   &_file {
     color: $primaryColor;
     font-weight: 500;
     font-size: 0.95em;
     display: flex;
     margin-left: 1em;
+
     &:before {
       content: "";
       width: 1px;
@@ -2487,10 +2654,12 @@ body .ui-scrollpanel {
       background-color: #a1a7b3;
       margin-right: 1em;
     }
+
     a {
       display: block;
       color: $primaryColor;
     }
+
     i.pi {
       margin-right: 0.4em;
     }
@@ -2499,20 +2668,25 @@ body .ui-scrollpanel {
   &_approve {
     color: $secondaryColor;
   }
+
   &_fix {
     color: $secondaryLightColor;
   }
+
   &_reject {
     color: $errorColor;
   }
+
   &_pending {
     color: $secondaryLightColor;
   }
 
   @media only screen and (max-width: 640px) {
     flex-direction: column;
+
     &_file {
       margin-left: 0;
+
       &:before {
         display: none;
       }
@@ -2524,6 +2698,7 @@ body .ui-scrollpanel {
 body .ui-toast {
   width: 17.5em;
   max-width: 94%;
+
   .ui-toast-message {
     &.ui-toast-message-success,
     &.ui-toast-message-info,
@@ -2533,9 +2708,11 @@ body .ui-toast {
       box-shadow: $messageShadow;
       border: $messageBorder;
       border-radius: $messageBorderRadius;
+
       .ui-toast-close-icon {
         color: $MessageCloseIconColor;
       }
+
       .ui-toast-icon {
         display: flex;
         justify-content: center;
@@ -2548,6 +2725,7 @@ body .ui-toast {
         font-size: $messageIconFontSize;
         width: $messageIconWidth;
         height: $messageIconHeight;
+
         &:before {
           line-height: 1.2;
         }
@@ -2556,36 +2734,45 @@ body .ui-toast {
 
     &.ui-toast-message-success {
       border-color: $successMessageBorderColor;
+
       .ui-toast-icon {
         color: $successMessageIconColor;
         border-color: $successMessageIconColor;
       }
     }
+
     &.ui-toast-message-info {
       border-color: $infoMessageBorderColor;
+
       .ui-toast-icon {
         color: $infoMessageIconColor;
         border-color: $infoMessageBorderColor;
       }
     }
+
     &.ui-toast-message-warn {
       border-color: $warnMessageBorderColor;
+
       .ui-toast-icon {
         color: $warnMessageIconColor;
         border-color: $warnMessageBorderColor;
       }
     }
+
     &.ui-toast-message-error {
       border-color: $errorMessageBorderColor;
+
       .ui-toast-icon {
         color: $errorMessageIconColor;
         border-color: $errorMessageBorderColor;
+
         &:before {
           line-height: 1.1;
         }
       }
     }
   }
+
   .ui-toast-message-content {
     padding: $messagePadding;
   }
@@ -2603,6 +2790,7 @@ body p-dropdown.ng-dirty.ng-invalid > .ui-dropdown,
 body p-dropdown.ng-invalid.ng-touched > .ui-dropdown {
   border: $inputErrorBorder;
 }
+
 body p-dropdown.ng-invalid.ng-touched > .ui-dropdown .ui-dropdown-trigger,
 body p-dropdown.ng-invalid.ng-dirty > .ui-dropdown .ui-dropdown-trigger {
   color: $errorColor;
@@ -2616,6 +2804,7 @@ body .ui-fileupload {
     border: 0 none;
     width: auto;
   }
+
   .ui-fileupload-content {
     background: transparent;
     color: $textColor;
@@ -2624,17 +2813,21 @@ body .ui-fileupload {
     padding-left: 0;
     z-index: 1;
   }
+
   .ui-progressbar {
     background-color: transparent;
   }
+
   .ui-fileupload-files {
     display: flex;
+
     img {
       display: block;
       max-height: 30px;
       max-width: 30px;
       width: auto !important;
     }
+
     .ui-fileupload-row {
       width: 100%;
       min-width: 14em;
@@ -2648,9 +2841,11 @@ body .ui-fileupload {
       padding: 0 0.5em;
       margin-top: -3em;
       margin-bottom: 0.5em;
+
       &.edit {
         margin-top: 0;
       }
+
       a {
         display: flex;
         flex-grow: 1;
@@ -2659,48 +2854,60 @@ body .ui-fileupload {
         padding-right: 0;
         color: $textColor;
       }
+
       i.pi {
         font-size: 1.4em;
         margin: 0 0.5em;
         color: $errorColor;
+
         &:before {
           font-family: "agriculture";
           content: "\f016";
         }
+
         &.pdf {
           color: $errorColor;
+
           &:before {
             content: "\f1c1";
           }
         }
+
         &.doc,
         &.docx {
           color: $primaryColor;
+
           &:before {
             content: "\f1c2";
           }
         }
+
         &.csv,
         &.xlsx {
           color: $secondaryColor;
+
           &:before {
             content: "\f1c3";
           }
         }
       }
+
       &:last-child {
         margin-bottom: 0;
       }
+
       & > div,
       & > * {
         display: inline-block;
         padding: 0.4em;
         font-size: 16px;
         line-height: 1;
+
         &:last-child {
           text-align: right;
         }
       }
+
       & > div {
         &:first-child {
           padding: 0.2em 0;
@@ -2709,26 +2916,32 @@ body .ui-fileupload {
           display: inline-block;
           color: #ff3126;
           font-size: 1.6em;
+
           img {
             display: none;
           }
+
           &:before {
             content: "\e9a8";
           }
         }
+
         &:nth-child(3) {
           display: none;
         }
       }
+
       .ui-button {
         width: 100%;
         border: 0 none;
         background-color: transparent;
         color: $secondaryLightColor;
         vertical-align: middle;
+
         &.ui-button-icon-only {
           width: 1.25em;
           margin: 0 0.5em;
+
           .ui-button-text {
             border: 0;
             clip: rect(0 0 0 0);
@@ -2740,6 +2953,7 @@ body .ui-fileupload {
             width: 1px;
           }
         }
+
         .pi {
           font-size: 1.25em;
         }
@@ -2753,9 +2967,11 @@ body .ui-message.ui-message-error {
   background-color: transparent;
   color: $errorColor;
   padding-top: 0.1em;
+
   .ui-message-icon {
     display: none;
   }
+
   .ui-message-text {
     font-size: 0.9em;
   }
@@ -2763,26 +2979,32 @@ body .ui-message.ui-message-error {
 
 body .ui-dialog-box {
   text-align: center;
+
   .ui-toast-close-icon {
     font-size: 1.6em;
   }
+
   .ui-toast {
     width: 24em;
     max-width: 94%;
   }
+
   .ui-toast-message-content {
     padding: $messagePaddingBig;
   }
+
   .ui-toast-message {
     overflow: visible;
     border-radius: $messageBorderRadiusBig !important;
   }
+
   .ui-dialog-content {
     text-align: center;
     min-height: 7em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .ui-dialog-icon {
       opacity: 0;
       position: absolute;
@@ -2798,17 +3020,21 @@ body .ui-dialog-box {
       font-size: $messageIconFontSizeBig;
       width: $messageIconWidthBig;
       height: $messageIconHeightBig;
+
       &:before {
         line-height: 1.3;
       }
     }
+
     .ui-toast-summary {
       font-size: 1.333em;
     }
+
     .ui-toast-detail {
       font-size: 1.125em;
     }
   }
+
   .ui-toast-message-success .ui-dialog-icon.success,
   .ui-toast-message-info .ui-dialog-icon.info,
   .ui-toast-message-warn .ui-dialog-icon.warn,
@@ -2820,14 +3046,17 @@ body .ui-dialog-box {
     color: $successMessageIconColor;
     border-color: $successMessageIconColor;
   }
+
   .ui-toast-message-info .ui-dialog-icon.info {
     color: $infoMessageIconColor;
     border-color: $infoMessageBorderColor;
   }
+
   .ui-toast-message-warn .ui-dialog-icon.warn {
     color: $warnMessageIconColor;
     border-color: $warnMessageBorderColor;
   }
+
   .ui-toast-message-error .ui-dialog-icon.error {
     color: $errorMessageIconColor;
     border-color: $errorMessageBorderColor;
@@ -2835,19 +3064,32 @@ body .ui-dialog-box {
 
   .ui-dialog-buttons {
     align-items: center;
+
     a {
       display: inline-block;
       text-decoration: underline;
+
       &:hover {
         text-decoration: none;
       }
     }
+
     & > div {
       text-align: left;
     }
+
     & > div:last-child {
       text-align: right;
     }
+
+    @at-root body .ui-dialog-box .ui-dialog-buttons > div {
+      text-align: right;
+    }
+
+    @at-root body .ui-dialog-box .ui-dialog-buttons > div:last-child {
+      text-align: left;
+    }
+
     & > div:first-child:last-child {
       text-align: center;
     }
@@ -2875,13 +3117,16 @@ body .ui-button .pi {
   &.pi-trash {
     font-family: "agriculture";
     font-size: 1.65em;
+
     &:before {
       content: "\e900";
     }
   }
+
   &.pi-times {
     font-family: "agriculture";
     font-size: 1.65em;
+
     &:before {
       content: "\e900";
     }
@@ -2917,13 +3162,16 @@ body .ui-button .pi {
   &.pi-plus-circle {
     font-family: "agriculture";
     font-size: 1.65em;
+
     &:before {
       content: "\e904";
     }
   }
+
   &.pi-info-circle {
     font-family: "agriculture";
     font-size: 1.65em;
+
     &:before {
       content: "\e905";
     }
@@ -2935,6 +3183,7 @@ body .pi {
     font-family: "agriculture";
     font-size: 1.2em;
     color: #ff3126;
+
     &:before {
       content: "\f1c1";
     }
@@ -2946,15 +3195,19 @@ body .ui-toast .ui-toast-icon {
     font-family: "agriculture";
     font-size: 1em;
   }
+
   &.pi-check:before {
     content: "\f00c";
   }
+
   &.pi-info-circle:before {
     content: "\f129";
   }
+
   &.pi-exclamation-triangle:before {
     content: "\f12a";
   }
+
   &.pi-times:before {
     content: "\f00d";
   }
@@ -2965,15 +3218,19 @@ body .ui-dialog-icon {
     font-family: "agriculture";
     font-size: 1em;
   }
+
   &.pi-check:before {
     content: "\f00c";
   }
+
   &.pi-info-circle:before {
     content: "\f129";
   }
+
   &.pi-exclamation-triangle:before {
     content: "\f12a";
   }
+
   &.pi-times:before {
     content: "\f00d";
   }
@@ -2994,6 +3251,7 @@ body .ui-dialog-icon {
     font-size: 1.33em;
   }
 }
+
 @media only screen and (max-width: 640px) {
   .main-zone {
     margin-top: 0;
@@ -3144,10 +3402,12 @@ body .ui-dialog-icon {
   right: initial;
   left: 5px;
 }
+
 body.ui-rtl .ui-dropdown .ui-dropdown-label {
   padding-left: 2em;
   padding-right: 1em;
 }
+
 .ui-rtl .ui-dropdown-panel .ui-dropdown-item {
   text-align: right;
 }
@@ -3162,6 +3422,7 @@ body .ui-accordion .ui-accordion-header a .ui-accordion-toggle-icon {
   position: absolute;
   padding: 3px;
 }
+
 body
   .ui-accordion
   .ui-accordion-header:not(.ui-state-disabled).ui-state-active
@@ -3173,4 +3434,110 @@ body
 /*calander*/
 .ui-rtl .ui-datepicker .ui-timepicker {
   direction: ltr;
+}
+
+//.print styles
+@media print {
+  .keys span {
+    display: block;
+  }
+
+  .keys span:first-child {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .keys span:last-child {
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  .content > div:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-decoration: underline;
+  }
+}
+
+/*read only css*/
+.read-only-dropdown .ui-dropdown {
+  border: 0;
+}
+
+.read-only-dropdown .ui-dropdown-trigger {
+  display: none;
+}
+
+.read-only-dropdown .ui-dropdown-label {
+  padding-right: 0 !important;
+}
+
+.read-only-calendar .ui-inputtext {
+  border: 0;
+}
+
+body
+  .ui-button.ui-state-default.ui-button-secondary.ui-status-approve.selected {
+  background: #1a7d28;
+  color: #fff;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary.ui-status-fix.selected {
+  background: #4a4a4a;
+  color: #fff;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary.ui-status-reject.selected {
+  background: #d22127;
+  color: #fff;
+}
+
+/*multi select*/
+body .ui-multiselect {
+  .ui-multiselect-panel {
+    border-radius: 24px;
+
+    .ui-multiselect-header {
+      display: none;
+    }
+
+    .ui-multiselect-items .ui-multiselect-item {
+      direction: rtl;
+      text-align: right;
+
+      .ui-chkbox {
+        margin: 0 0 0 0.5em;
+
+        .ui-chkbox-box .ui-chkbox-icon {
+          font-size: 1.5em;
+          overflow: visible;
+          margin-top: -0.1em;
+        }
+      }
+    }
+  }
+
+  &.ui-widget.ui-state-default.ui-corner-all {
+    width: 100%;
+    border-radius: 24px;
+  }
+
+  .ui-multiselect-label {
+    white-space: nowrap;
+    padding-left: 2em;
+    padding-right: 1em;
+  }
+
+  .ui-multiselect-trigger {
+    left: 5px;
+    right: initial;
+    background-color: transparent !important;
+    font-size: 14px;
+  }
+}
+
+/*multi select*/
+.display-none {
+  display: none !important;
 }

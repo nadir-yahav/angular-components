@@ -12,14 +12,18 @@ import { TabViewModule } from 'primeng/tabview';
 import { FileUploadModule } from 'primeng/fileupload';
 import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
 import { StepsModule } from 'primeng/steps';
 
 import { AppComponent } from './app.component';
+import { VisualComponent } from './visual.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, ExpandContentDirective],
+  declarations: [AppComponent, VisualComponent, ExpandContentDirective],
   imports: [
     BrowserModule,
     AutoCompleteModule,
@@ -32,13 +36,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DropdownModule,
     TooltipModule,
     InputTextModule,
+    InputSwitchModule,
     TabViewModule,
     FileUploadModule,
     HttpClientModule,
     CheckboxModule,
+    RadioButtonModule,
     StepsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [VisualComponent],
 })
 export class AppModule {}

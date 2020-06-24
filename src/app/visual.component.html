@@ -1,0 +1,130 @@
+<div class="page-container">
+  <div class="main-zone">
+    <div class="title-zone">
+      <h2 class="title-zone_title">
+        שחרור פריט מהנמל
+      </h2>
+    </div>
+    <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+    <div class="tool-bar blue-box">
+      <ul class="pair-list nav">
+        <li>
+          <p>ביקורת ויזואלית</p>
+          <p></p>
+        </li>
+        <li>
+          <p>סטטוס</p>
+          <p>חדש</p>
+        </li>
+        <li>
+          <p>תאריך עדכון</p>
+          <p>12.11.2019</p>
+        </li>
+        <li>
+          <p>עודכן על ידי</p>
+          <p>ד"ר ברוס באנר</p>
+        </li>
+      </ul>
+    </div>
+    <div class="p-col-12 p-marging-bottom">
+      <p-accordion [activeIndex]="tabIndex" (onOpen)="onTabOpen($event)">
+        <p-accordionTab header="דיווח על ממצאים" [selected]="true">
+          <div class="switch">
+            <span [class.bold]="!checked">ללא ביקורת</span>
+            <p-inputSwitch (onChange)="handleChange($event)" [(ngModel)]="checked"></p-inputSwitch>
+            <span [class.bold]="checked">עם ביקורת</span>
+          </div>
+          <div class="top-zone">
+            <div class="title-zone">
+              <div class="title-zone_desk">
+                <span class="astrix">*</span>
+                כוכבית מציינת שדה חובה
+              </div>
+            </div>
+          </div>
+          <div class="content-zone">
+            <div class="blue-section" *ngFor="let item of list">
+              <div class="tool-bar">
+                <ul class="pair-list auto">
+                  <li>
+                    <p>מהות פריט</p>
+                    <p>צמח</p>
+                  </li>
+                  <li>
+                    <p>פריט</p>
+                    <p>תפוז</p>
+                  </li>
+                  <li>
+                    <p>מטרת שימוש</p>
+                    <p>תעשיה</p>
+                  </li>
+                  <li>
+                    <p>צורת פריט</p>
+                    <p>גבעול</p>
+                  </li>
+                  <li>
+                    <p>מדינת מקור</p>
+                    <p>ספרד</p>
+                  </li>
+                  <li>
+                    <p>מספר אצווה</p>
+                    <p>AK15744</p>
+                  </li>
+                  <li>
+                    <p>ספק משני</p>
+                    <p>Green Fields</p>
+                  </li>
+                </ul>
+              </div>
+              <hr class="dashed">
+              <div class="p-grid">
+                <p-checkbox class="p-col-4" inputId="sampling" label="נלקחה דגימה למעבדה"></p-checkbox>
+                <div class="p-col-8">
+                  <b>תקינות השילוב</b><span class="astrix ml20"> *</span>
+                  <p-radioButton name="groupname{{item.id}}" value="{{VALID}}" label={{VALID}}
+                    [(ngModel)]="item.selectedValue">
+                  </p-radioButton>
+                  <p-radioButton name="groupname{{item.id}}" value="{{NOT_VALID}}" label="{{NOT_VALID}}"
+                    [(ngModel)]="item.selectedValue">
+                  </p-radioButton>
+                </div>
+              </div>
+              <div class="tool-bar left" *ngIf="!isItemValid(item)">
+                <div class="icon-bar">
+                  <i *ngIf="isReadOnly(item)" class="fas fa-pen" tabindex="0"
+                    (click)="item.readonly=!isReadOnly(item)"></i>
+                  <span *ngIf="!isReadOnly(item)" class="link ml10"
+                    (click)="item.readonly=!isReadOnly(item)">ביטול</span>
+                  <i class="fas fa-trash-alt" tabindex="0"></i>
+                </div>
+              </div>
+              <div class="p-grid" *ngIf="!isItemValid(item) && isReadOnly(item)">
+                <div class="p-col-6">
+                  <div><b>ממצאים</b></div>
+                  <span *ngFor="let f of item.findings">{{f.value}}</span>
+                </div>
+                <div class="p-col-6">
+                  <b>הערות לממצאים</b>
+                  <div>{{item.note}}</div>
+                </div>
+              </div>
+              <div class="p-grid mr20" *ngIf="!isItemValid(item) && !isReadOnly(item)">
+                <div class="p-col-7 mr40">
+                  <b>ממצאים</b><span class="astrix"> *</span>
+                  <div class="p-grid">
+                    <div *ngFor="let f of item.findings" class="p-col-6">
+                      <div>{{f.value}}</div>
+                      <p-inputSwitch (onChange)="handleChange($event)" [(ngModel)]="f.valid"></p-inputSwitch>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-col-12">
+                  <b>הערות לממצאים</b>
+                  <textarea class="">{{item.note}}</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-accordionTab>
+      </p-accordion>
+    </div>

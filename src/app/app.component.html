@@ -273,7 +273,8 @@
                             Other conditions
                           </h2>
                           <div class="title-zone_desk">
-                            A certificate from the competent authority (NPPO) stating that the seeds are not genetically
+                            A certificate from the competent authority (NPPO) stating that the seeds are not
+                            genetically
                             modified.<br>The seeds should be treated with:
                           </div>
                         </div>
@@ -300,7 +301,7 @@
                                 <td></td>
                                 <td></td>
                               </tr>
-                              <tr class="desk-line">
+                              <tr>
                                 <td>Phosphine GE</td>
                                 <td></td>
                                 <td>2gr/m3</td>
@@ -332,10 +333,9 @@
                   </p-tabView>
                 </div>
               </div>
-              <div class="buttons-place mt20">
+              <div class="buttons-place">
                 <button class="ui-button-rounded ui-button-secondary" iconPos="right"
-                  icon="far fa-arrow-alt-circle-right" pButton type="button" (click)="handleMyTabPrevStep()"
-                  label="הקודם"></button>
+                  icon="far fa-arrow-alt-circle-right" pButton type="button" (click)="prevTab()" label="הקודם"></button>
                 <button class="ui-button-rounded ui-button-secondary" icon="far fa-arrow-alt-circle-left" pButton
                   type="button" (click)="nextTab()" label="הבא"></button>
               </div>
@@ -571,10 +571,12 @@
         <p-accordionTab header="אישור תנאי שירות">
           <div class="content-zone">
             <p>
-              ,מלוא זכויות הקניין הרוחני לרבות סימני מסחר, סודות מסחריים וזכויות יוצרים, בין אם רשומים ובין אם לאו, באתר
+              ,מלוא זכויות הקניין הרוחני לרבות סימני מסחר, סודות מסחריים וזכויות יוצרים, בין אם רשומים ובין אם לאו,
+              באתר
               לרבות, מבלי לגרוע, בעיצובו, ובכל תוכנה, יישום קובץ גרפי טקסטים, קוד מחשב, תכנים אודיו-ויזואליים וכל חומר
               אחר
-              הכלול באתר - הינן של החברה בלבד ו/או ספקי התוכן שלה, ו/או שותפים עסקיים, לפי העניין וחלקם אף מוגנים על ידי
+              הכלול באתר - הינן של החברה בלבד ו/או ספקי התוכן שלה, ו/או שותפים עסקיים, לפי העניין וחלקם אף מוגנים על
+              ידי
               חוקי זכויות היוצרים של מדינת ישראל, אמנות בינ"ל וחוקי זכויות יוצרים של מדינות אחרות. אין להעתיק, להפיץ,
               לשכפל, לשדר, להעביר בהעברת המשך להציג, להנפיק רישיון, להציג בפומבי, להעמיד לרשות הציבור, ליצור יצירות
               נגזרות, להשכיר, לתרגם או למסור לצד שלישי כל חלק מהנ"ל בלא קבלת .הסכמתה המפורשת או לפי העניין של .אותם
@@ -601,18 +603,54 @@
               <div class="top-zone">
                 <div class="title-zone">
                   <div class="title-zone_desk">
-                    אגרת שחרור מהנמל <b class="big">₪55</b>
+                    <span class="astrix">*</span>
+                    כוכבית מציינת שדה חובה
                   </div>
                 </div>
               </div>
               <div class="content-zone">
-                <div class="p-grid">
+                <div class="ui-table ui-widget ui-table-responsive">
+                  <div class="ui-table-wrapper">
+                    <table>
+                      <thead class="ui-table-thead">
+                        <tr>
+                        <tr>
+                          <th>שם אגרה</th>
+                          <th>מק"ט</th>
+                          <th>ערך לבודד</th>
+                          <th>כמות</th>
+                          <th>סה"כ</th>
+                        </tr>
+                      </thead>
+                      <tbody class="ui-table-tbody">
+                        <tr>
+                          <td>שחרור תוצרת טרייה</td>
+                          <td>2214-544</td>
+                          <td>₪530</td>
+                          <td>1</td>
+                          <td>₪530</td>
+                        </tr>
+                        <tr>
+                          <td>אגרה לאצווה</td>
+                          <td></td>
+                          <td>₪30</td>
+                          <td>20</td>
+                          <td>₪600</td>
+                        </tr>
+                        <tr class="total">
+                          <td colspan="5">סה"כ לתשלום <b>₪1,130</b></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="p-grid mt20">
                   <div class="p-col-12 p-lg-3 p-sm-6">
-                    <label for="">סוג לקוח</label>
+                    <label for="">בחירת שיטת תשלום</label>
                     <span class="astrix">*</span>
                     <p-dropdown [options]="cities" [(ngModel)]="selectedCity"></p-dropdown>
                   </div>
-                  <div class="p-col-9 align-left middle">
+                  <div class="p-col-9 align-left bottom">
                     התשלום מתבצע בשרת התשלומים הממשלתי (מעבר לאתר חיצוני)
                   </div>
                 </div>
@@ -623,16 +661,109 @@
               </div>
             </ng-container>
             <ng-container *ngSwitchCase="2">
-              <div class="status-view_approve f-medium mb15"><i class="far fa-thumbs-up"></i> תשלום בוצע בהצלחה</div>
-              <span>אגרת שחרור מהנמל: <b class="big">₪55</b></span>
-              <span class="sep"> | </span>
-              <span>אמצעי תשלום: כרטיס אשראי ויזה</span>
-              <span class="sep"> | </span>
-              <span>מספר אישור תשלום: 9575942</span>
+              <div class="status-view_approve f-medium mt10 mb20"><i class="far fa-thumbs-up"></i> תשלום בוצע בהצלחה
+              </div>
+              <div class="mb30"><b>פירוט תשלום</b></div>
+              <div class="content-zone">
+                <div class="ui-table ui-widget ui-table-responsive">
+                  <div class="ui-table-wrapper">
+                    <table>
+                      <thead class="ui-table-thead">
+                        <tr>
+                        <tr>
+                          <th>שם אגרה</th>
+                          <th>מק"ט</th>
+                          <th>ערך לבודד</th>
+                          <th>כמות</th>
+                          <th>סה"כ</th>
+                        </tr>
+                      </thead>
+                      <tbody class="ui-table-tbody">
+                        <tr>
+                          <td>שחרור תוצרת טרייה</td>
+                          <td>2214-544</td>
+                          <td>₪530</td>
+                          <td>1</td>
+                          <td>₪530</td>
+                        </tr>
+                        <tr>
+                          <td>אגרה לאצווה</td>
+                          <td></td>
+                          <td>₪30</td>
+                          <td>20</td>
+                          <td>₪600</td>
+                        </tr>
+                        <tr class="total">
+                          <td colspan="5">סה"כ שולם <b>₪1,130</b></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-place right mt20">
+                <span>אמצעי תשלום <b>כרטיס אשראי ויזה</b></span>
+                <span class="sep"> | </span>
+                <span>מספר אישור תשלום <b>9575942</b></span>
+              </div>
             </ng-container>
           </ng-container>
         </p-accordionTab>
       </p-accordion>
     </div>
+    <div class="p-col-12 align-left">
+      <button type="button" pButton label="שליחה" class="ui-button-primary ui-button-rounded"></button>
+    </div>
+  </div>
+</div>
+
+<div class="p-col-12 p-marging-bottom">
+  <h3>Messages</h3>
+  <button type="button" pButton (click)="messageSuccess()" label="Success"
+    class="ui-button-success ui-button-rounded"></button>
+  <button type="button" pButton (click)="messageInfo()" label="Info" class="ui-button-info ui-button-rounded"></button>
+  <button type="button" pButton (click)="messageWarn()" label="Warn"
+    class="ui-button-warning ui-button-rounded"></button>
+  <button type="button" pButton (click)="messageError()" label="Error"
+    class="ui-button-danger ui-button-rounded"></button>
+</div>
+
+<div class="p-col-12 p-marging-bottom">
+  <h3>Confirms</h3>
+  <button type="button" pButton (click)="confirmSuccess()" label="Success"
+    class="ui-button-success ui-button-rounded"></button>
+  <button type="button" pButton (click)="confirmInfo()" label="Info" class="ui-button-info ui-button-rounded"></button>
+  <button type="button" pButton (click)="confirmWarn()" label="Warn"
+    class="ui-button-warning ui-button-rounded"></button>
+  <button type="button" pButton (click)="confirmError()" label="Error"
+    class="ui-button-danger ui-button-rounded"></button>
+</div>
+
+<div class="p-col-12 p-marging-bottom">
+  <h3>Toast</h3>
+  <button type="button" pButton (click)="toastSuccess()" label="Success"
+    class="ui-button-success ui-button-rounded"></button>
+  <button type="button" pButton (click)="toastInfo()" label="Info" class="ui-button-info ui-button-rounded"></button>
+  <button type="button" pButton (click)="toastWarn()" label="Warn" class="ui-button-warning ui-button-rounded"></button>
+  <button type="button" pButton (click)="toastError()" label="Error"
+    class="ui-button-danger ui-button-rounded"></button>
+</div>
+
+<div class="p-col-12 p-marging-bottom">
+  <h3>Show By Id</h3>
+  <button type="button" pButton (click)="showMessageById()" label="MessageById"
+    class="ui-button-info ui-button-rounded"></button>
+  <button type="button" pButton (click)="showConfirmById()" label="ConfirmById"
+    class="ui-button-info ui-button-rounded"></button>
+</div>
+
+<div class="p-col-12 p-marging-bottom">
+  <h3>Status of request Pending for approval</h3>
+  <div class="status-buttons">
+    <button pButton type="button" label="Approve"
+      class="ui-button-rounded ui-button-secondary ui-status-approve"></button>
+    <button pButton type="button" label="Fix" class="ui-button-rounded ui-button-secondary ui-status-fix"></button>
+    <button pButton type="button" label="Reject"
+      class="ui-button-rounded ui-button-secondary ui-status-reject"></button>
   </div>
 </div>

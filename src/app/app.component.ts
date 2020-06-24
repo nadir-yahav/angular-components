@@ -15,6 +15,7 @@ interface City {
 export class AppComponent {
   cities: SelectItem[];
   selectedCity: City;
+  // constructor(private msgSrv: GlobalMessageService) {
   constructor() {
     //SelectItem API with label-value pairs
     this.cities = [
@@ -150,4 +151,54 @@ export class AppComponent {
       },
     },
   ];
+
+  //Confirm messages
+  confirmSuccess() {
+    //this.msgSrv.confirmSuccess('Confirm Success', 'description', () => { console.log('Confirmed') });
+  }
+  confirmError() {
+    //this.msgSrv.confirmError('Confirm Error', 'description', () => { console.log('Confirmed') });
+  }
+  confirmInfo() {
+    //this.msgSrv.confirmInfo('Confirm Info', 'description', () => { console.log('Confirmed') });
+  }
+  confirmWarn() {
+    //this.msgSrv.confirmWarn('Confirm Warn', 'description', () => { console.log('Confirmed') });
+  }
+
+  //Regular messages
+  messageSuccess() {
+    //this.msgSrv.messageSuccess('Message Success', 'description');
+  }
+  messageError() {
+    //this.msgSrv.messageError('Messag Error', 'description');
+  }
+  messageInfo() {
+    //this.msgSrv.messageInfo('Message Info', 'description');
+  }
+  messageWarn() {
+    //this.msgSrv.messageWarn('Message Warn', 'description');
+  }
+
+  //Toast messages
+  toastSuccess() {
+    //this.msgSrv.toastSuccess('Toast Success', 'description');
+  }
+  toastError() {
+    //this.msgSrv.toastError('Toast Error', 'description');
+  }
+  toastInfo() {
+    //this.msgSrv.toastInfo('Toast Info', 'description');
+  }
+  toastWarn() {
+    //this.msgSrv.toastWarn('Toast Warn', 'description');
+  }
+
+  //Show By Id
+  showMessageById() {
+    //this.msgSrv.showMessageById(9);
+  }
+  showConfirmById() {
+    //this.msgSrv.showConfirmById(13, () => alert('APPROVED'));
+  }
 }
